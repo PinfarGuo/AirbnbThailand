@@ -53,6 +53,7 @@ Excel files created to load into Tableau are "listings_cleaned" and "occupancy_r
 
 ## Share
 With the analyzed data that have been gathered I created an interactive dashboard in Tableau using KPIs, map, and filters to display the information in a quick and easy to understand visualization.
+
 [Airbnb Thailand Dashboard](https://public.tableau.com/app/profile/pinfar.guo/viz/AirbnbThailand_16827895828170/Dashboard1?publish=yes)
 
 ## Act
