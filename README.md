@@ -49,7 +49,11 @@ With the transformed data analysis can be done via querying and then extracted f
 Excel files created to load into Tableau are "listings_cleaned" and "occupancy_rate".
 
 ## Analyze
-
+Based on Analysis in Excel, SQL, and Tableau:
+- top 5 area are - 'Vadhana', 'Khlong Toei', 'Sathon', 'Bang Rak', 'Phaya Thai'
+- the best room type is entire home/apt, private room, hotel room, shared room.
+- the best occupancy rate is 40%+.
+- the best price is around ฿1,200 to ฿2,400 per night, with discounts for longer stay (ex: 1 month, 3 month, 6 month, 12 month).
 
 ## Share
 With the analyzed data that have been gathered I created an interactive dashboard in Tableau using KPIs, map, and filters to display the information in a quick and easy to understand visualization.
@@ -58,13 +62,8 @@ With the analyzed data that have been gathered I created an interactive dashboar
 
 ## Act
 Based on analysis the following recommendations are provided in terms of where to buy a new rental location:
-- top 5 area are - 'Vadhana', 'Khlong Toei', 'Sathon', 'Bang Rak', 'Phaya Thai'
-- the best room type is entire home/apt.
-- the best occupancy rate is 40%+.
-- the best price is around ฿1,200 to ฿2,400 per night, with discounts for longer stay (ex: 1 month, 3 month, 6 month, 12 month).
 
 The following 3 listings are the Top 3 listing that are suggested to be used as example to imitate:
-
  1. [Listing 1](https://www.airbnb.com/rooms/20869092): 1224 reviews with review score of 4.89 in Phaya Thai for ฿1,571 for entire home/apt.
  2. [Listing 2](https://www.airbnb.com/rooms/6013487): 477 reviews with review score of 4.85 in Khlong Toei for ฿2,329 for hotel room.
  3. [Listing 3](https://www.airbnb.com/rooms/7537579): 382 reviews with review score of 4.88 in Vadhana for ฿1,250 for entire home/apt.
