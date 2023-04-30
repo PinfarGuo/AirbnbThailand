@@ -1,4 +1,6 @@
 # Airbnb Thailand
+![CoverPage](https://github.com/PinfarGuo/AirbnbThailand/blob/main/AirbnbThailand_CoverPage.jpg)
+
 ## Ask
 The business task for this project/case study is to find a new Airbnb rental in Thailand using data.
 List of questions related to this task are:
