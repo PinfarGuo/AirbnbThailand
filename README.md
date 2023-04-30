@@ -71,6 +71,6 @@ The following 3 listings are the Top 3 listing that are suggested to be used as 
  
  ## Links
  Report by: Pin Far Guo
- Dataset: [Kaggle](https://www.kaggle.com/datasets/zhenhaosng/airbnb-in-thailand)
- SQL: [SQL Queries](https://github.com/PinfarGuo/AirbnbThailand/blob/main/AirbnbThailand.sql)
- Tableau: [Tableau Dashboard](https://public.tableau.com/app/profile/pinfar.guo/viz/AirbnbThailand_16827895828170/Dashboard1?publish=yes)
+ - Dataset: [Kaggle](https://www.kaggle.com/datasets/zhenhaosng/airbnb-in-thailand)
+ - SQL: [SQL Queries](https://github.com/PinfarGuo/AirbnbThailand/blob/main/AirbnbThailand.sql)
+ - Tableau: [Tableau Dashboard](https://public.tableau.com/app/profile/pinfar.guo/viz/AirbnbThailand_16827895828170/Dashboard1?publish=yes)
