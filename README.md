@@ -63,6 +63,7 @@ GROUP BY neighbourhood_cleansed
 ORDER BY review_num DESC
 ;
 ```
+[TopLocations](https://github.com/PinfarGuo/AirbnbThailand/blob/main/TopLocations.jpg)
 - the best room type is entire home/apt.
 ```sql
 SELECT DISTINCT room_type, 
@@ -74,8 +75,9 @@ WHERE review_scores_location IS NOT NULL
 GROUP BY room_type
 ORDER BY review_num DESC
 ;
-```
-- the best occupancy rate is 40%+.
+``` 
+[TopRoomType](https://github.com/PinfarGuo/AirbnbThailand/blob/main/TopRoomType.jpg)
+- the best occupancy rate is 39%+.
 ```sql
 SELECT DISTINCT neighbourhood_cleansed, AVG(oc.occupancy_rate) as occupancy
 FROM listings li
@@ -85,7 +87,8 @@ WHERE neighbourhood_cleansed IN ('Vadhana','Khlong Toei','Sathon','Bang Rak','Ph
 GROUP BY neighbourhood_cleansed
 ORDER BY occupancy DESC
 ;
-```
+``` 
+[TopOccupancyRate](https://github.com/PinfarGuo/AirbnbThailand/blob/main/TopOccupancyRate.jpg)
 - the best price is around ฿1,200 to ฿2,400 per night, with discounts for longer stay (ex: 1 month, 3 month, 6 month, 12 month).
 ```sql
 SELECT neighbourhood_cleansed, 
@@ -99,7 +102,8 @@ WHERE review_scores_location IS NOT NULL
 GROUP BY neighbourhood_cleansed
 ORDER BY total_reviews DESC,neighbourhood_cleansed,avg_price DESC
 ;
-```
+``` 
+[TopPrice](https://github.com/PinfarGuo/AirbnbThailand/blob/main/TopPrice.jpg)
 
 ## Share
 With the analyzed data that have been gathered I created an interactive dashboard in Tableau using KPIs, map, and filters to display the information in a quick and easy to understand visualization.
