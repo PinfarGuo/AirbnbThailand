@@ -50,10 +50,56 @@ Excel files created to load into Tableau are "listings_cleaned" and "occupancy_r
 
 ## Analyze
 Based on Analysis in Excel, SQL, and Tableau:
-- top 5 area are - 'Vadhana', 'Khlong Toei', 'Sathon', 'Bang Rak', 'Phaya Thai'
-- the best room type is entire home/apt, private room, hotel room, shared room.
+- top 5 area are - 'Vadhana', 'Khlong Toei', 'Parthum Wan', 'Bang Rak', 'Phaya Thai'
+```sql
+SELECT DISTINCT neighbourhood_cleansed, 
+  COUNT(id) AS listings, 
+  SUM(number_of_reviews) AS review_num, 
+  ROUND(AVG(review_scores_location),1) AS avg_score
+FROM listings
+WHERE review_scores_location IS NOT NULL  
+  AND number_of_reviews >= 100
+GROUP BY neighbourhood_cleansed
+ORDER BY review_num DESC
+;
+```
+- the best room type is entire home/apt.
+```sql
+SELECT DISTINCT room_type, 
+  SUM(number_of_reviews) AS review_num, 
+  ROUND(AVG(review_scores_location),1) AS review_score
+FROM listings
+WHERE review_scores_location IS NOT NULL 
+  AND number_of_reviews >=100
+GROUP BY room_type
+ORDER BY review_num DESC
+;
+```
 - the best occupancy rate is 40%+.
+```sql
+SELECT DISTINCT neighbourhood_cleansed, AVG(oc.occupancy_rate) as occupancy
+FROM listings li
+JOIN #temp_occupancy_rate oc
+ON li.id = oc.listing_id
+WHERE neighbourhood_cleansed IN ('Vadhana','Khlong Toei','Sathon','Bang Rak','Phaya Thai','Huai Khwang','Ratchathewi','Parthum Wan','Khlong San','Chatu Chak')
+GROUP BY neighbourhood_cleansed
+ORDER BY occupancy DESC
+;
+```
 - the best price is around ฿1,200 to ฿2,400 per night, with discounts for longer stay (ex: 1 month, 3 month, 6 month, 12 month).
+```sql
+SELECT neighbourhood_cleansed, 
+  SUM(number_of_reviews) AS total_reviews, 
+  ROUND(AVG(price),2) AS avg_price
+FROM listings
+WHERE review_scores_location IS NOT NULL  
+  AND number_of_reviews >= 100
+  AND price < 10000
+  AND neighbourhood_cleansed IN ('Vadhana','Khlong Toei','Sathon','Bang Rak','Phaya Thai','Huai Khwang','Ratchathewi','Parthum Wan','Khlong San','Chatu Chak')
+GROUP BY neighbourhood_cleansed
+ORDER BY total_reviews DESC,neighbourhood_cleansed,avg_price DESC
+;
+```
 
 ## Share
 With the analyzed data that have been gathered I created an interactive dashboard in Tableau using KPIs, map, and filters to display the information in a quick and easy to understand visualization.
